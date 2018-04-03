@@ -1,0 +1,15 @@
+{% block content %}
+    <h1>Create Field Value</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.field.label }}<br>
+            {{ form.field }}
+        </p>
+        <p>
+            {{ form.value.label }}<br>
+            {{ form.value(maxlength=1024) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+    <head>
+        <title>PromptBot</title>
+    </head>
+    <body>
+        {% for field in fields %}
+            <span class="field_name">{{ field.name }}</span>
+            <span class="field_value">{{ field.random_value() }}</span>
+        {% endfor %}
+    </body>
+</html>
