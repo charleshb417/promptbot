@@ -17,7 +17,7 @@ def fields():
         field = Field(name=form.name.data)
         db.session.add(field)
         db.session.commit()
-        return redirect('/')
+        return redirect('/fields')
     return render_template('create_field.html', title='Create Field', form=form)
 
 @app.route('/fieldvalues', methods=['GET', 'POST'])
@@ -30,7 +30,7 @@ def values():
             value = FieldValue(field_id=int(form.field.data), value=form.value.data)
             db.session.add(value)
             db.session.commit()
-            return redirect('/')
+            return redirect('/fieldvalues')
         except:
             return render_template('create_field_value.html', title='Create Field Value', form=form)
     return render_template('create_field_value.html', title='Create Field Value', form=form)

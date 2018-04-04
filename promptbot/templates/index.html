@@ -1,12 +1,18 @@
-<!doctype html>
-<html>
-    <head>
-        <title>PromptBot</title>
-    </head>
-    <body>
-        {% for field in fields %}
-            <span class="field_name">{{ field.name }}</span>
-            <span class="field_value">{{ field.random_value() }}</span>
-        {% endfor %}
-    </body>
-</html>
+{% extends "layout.html" %}
+
+{% block heading %}
+    <span class="heading_content">Random Story Prompt</span>
+{% endblock %}
+
+{% block content %}
+    <table class="promptbot_table">
+    {% for field in fields %}
+        <tr>
+            <td class="field_name">{{ field.name }}</td>
+            <td class="field_value">{{ field.random_value() }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    <input type="button" value="Refresh" onClick="window.location.reload()">
+{% endblock %}

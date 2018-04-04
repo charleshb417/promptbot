@@ -1,0 +1,58 @@
+/* Stylesheet */
+
+/* Styling for the application header, i.e. all pages will have this at the top */
+#app_header {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom:10px;
+}
+
+.app_title {
+    display: block;
+    font-size: xx-large;
+}
+
+.app_subtitle {
+    display: block;
+    font-size: x-large;
+}
+
+/* Styling for section headers */
+#heading {
+
+}
+
+.heading_content {
+    font-size: x-large;
+    font-weight:bold;
+}
+
+/* Styling for the footer, i.e. all pages will have this at the bottom */
+#footer {
+    padding-top: 10px;
+    width: 100%;
+}
+
+#footer > a {
+    padding-right: 100px;
+    text-decoration: none;
+}
+
+/* Styling for the main table */
+.promptbot_table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+}
+
+th, td {
+    border: 1px solid #000;
+    text-align: left;
+    padding: 8px;
+}
+
+td.field_name {
+    font-weight: bold;
+    width:25%;
+    background-color:#000;
+    color:#fff
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+    <title>PromptBot</title>
+    {% endblock %}
+  </head>
+  <body>
+    <div id="app_header">
+      <span class="app_title">Prompt Bot</span>
+      <span class="app_subtitle">Sparking creativity since 2018</span>
+    </div>
+    <div id="heading">{% block heading %}{% endblock %}</div>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      <a href="/">Main</a>
+      <a href="/fields">Create Field</a>
+      <a href="/fieldvalues">Create Field Value</a>
+    </div>
+  </body>
+</html>
